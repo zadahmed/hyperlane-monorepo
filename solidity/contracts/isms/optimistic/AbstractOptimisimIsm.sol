@@ -39,6 +39,7 @@ abstract contract AbstractOptimismIsm is IRoutingIsm {
      */
     function verify(bytes calldata _metadata, bytes calldata _message)
         public
+        virtual
         returns (bool)
     {
         return route(_message).verify(_metadata, _message);
